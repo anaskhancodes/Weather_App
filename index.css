@@ -1,0 +1,297 @@
+.body {
+    background-color: #000000be;
+}
+
+.contaner {
+    /* This is main DIV */
+    width: 680px;
+    height: 460px;
+    background-color: rgba(0, 0, 0, 0.658);
+    margin-left: 350px;
+    margin-right: 370px;
+    margin-top: 120px;
+    border-right: solid rgb(255, 230, 0);
+    border-right-width: 13px;
+    border-radius: 10px;
+    box-shadow: 23px 23px 20px rgb(0, 0, 0);
+}
+
+
+.TemperatuerDiv {
+    /* This is a contaner of temperatur & Locotion name */
+    width: 50%;
+    height: 200px;
+    /* font-size: 150px; */
+    /* background-color: aqua; */
+    display: inline-block;
+}
+
+
+#TemperatuerNumber {
+    /*this is themperature number of lucation */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0 0px 20px;
+    font-size: 120px;
+    color: rgb(255, 255, 255);
+}
+
+
+span {
+    /* This is the °C | °F */
+    margin: 30px 0 0 0;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    bottom: 120px;
+    right: -160px;
+}
+
+/* #IconName{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    bottom: 200px;
+    left: 200px;
+} */
+
+.line {
+    color: rgb(134, 134, 134);
+    display: inline-block;
+    position: relative;
+    left: -40px;
+    bottom: 38px;
+}
+
+#LocationIcon {
+    position: relative;
+    right: -5px;
+    bottom: 40px;
+}
+
+#LocationName {
+    /* This is the location that user search*/
+    margin: 0 0 0 25px;
+    font-size: 30px;
+    display: inline-block;
+    color: aliceblue;
+    position: relative;
+    right: -3px;
+    bottom: 40px;
+}
+
+.WindIcon {
+    /*Wind Icon DIV*/
+    display: inline-block;
+    position: relative;
+    background-color: aqua;
+    width: 100px;
+    height: 0px;
+    right: -37px;
+    top: -330px;
+}
+
+#Wind {
+    /*Wind Icon*/
+    display: flex;
+    font-size: 30px;
+    /* justify-content: center; */
+    /* width: 70px;
+    height: 70px; */
+}
+
+#WindText {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 50;
+    position: relative;
+    left: 45px;
+    bottom: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.TemperatureIconMax {
+    display: inline-block;
+    position: relative;
+    /* background-color: rgb(0, 255, 0); */
+    width: 100px;
+    height: 40px;
+    right: 173px;
+    top: -260px;
+}
+
+#TemperatureMax {
+    display: flex;
+    /* justify-content: center; */
+    /* width: 70px;
+    height: 70px; */
+    font-size: 35px;
+}
+
+#TemperatureText2 {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 50;
+    position: relative;
+    left: 45px;
+    bottom: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.TemperatureIconMine {
+    display: inline-block;
+    position: relative;
+    /* background-color: aqua; */
+    width: 100px;
+    height: 40px;
+    right: 70px;
+    top: -190px;
+}
+
+#TemperatureMine {
+    display: flex;
+    /* justify-content: center; */
+    /* width: 70px;
+    height: 70px; */
+    font-size: 35px;
+}
+
+#TemperatureText {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: 50;
+    position: relative;
+    left: 45px;
+    bottom: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.LocationSearch {
+    /* this is Search Bar DIV */
+    width: 50%;
+    /* background-color: blue; */
+    display: inline-block;
+    position: relative;
+    left: 350px;
+    bottom: 198px;
+}
+
+
+#CityName {
+    /* This is the Search bar that user search location*/
+    width: 250px;
+    height: 40px;
+    border-radius: 100px;
+    /* border-radius: solid green; */
+    border: 4px;
+}
+
+#SearchIcon {
+    /* this is Serch Bar DIV*/
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 12px;
+    right: 5px;
+
+}
+
+button {
+    /* This is the Search bar Icon*/
+    background-color: rgb(255, 230, 0);
+    display: inline-block;
+    border-radius: 70px;
+    border: none;
+    position: relative;
+    bottom: 240px;
+    left: 610px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
+
+
+#img {
+    /* This is Main Images Div*/
+    position: relative;
+    left: 360px;
+    bottom: 200px;
+    /* display: flex; */
+    /* justify-content: center; */
+
+}
+
+
+/*Icons*/
+/*Icons*/
+.DayIcon {
+    height: 250px;
+    width: 325px;
+}
+
+.NightIcon {
+    height: 250px;
+    width: 325px;
+}
+
+.BroughtIcon {
+    height: 250px;
+    width: 325px;
+}
+
+.HeatIcon {
+    height: 250px;
+    width: 325px;
+}
+
+.Cold {
+    height: 250px;
+    width: 325px;
+}
+
+.CloudNight {
+    height: 250px;
+    width: 325px;
+}
+
+.CloudDay {
+    height: 250px;
+    width: 325px;
+}
+
+.NotFound {
+    height: 250px;
+    width: 325;
+}
+
+
+
+
+@media (max-width: 1150px) {
+    .contaner {
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-top: 100px;
+    }
+}
+
+/* @media (max-width: 1100px) {
+    .contaner {
+        margin-right: 40px;
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .contaner {
+        width: 780px;
+        height:560px;
+    }
+} */

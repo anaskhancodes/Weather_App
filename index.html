@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="body">
+
+    <div class="contaner"> <!--This is Main DIV -->
+
+        <form onsubmit="getWeather(); return false">
+            <!-- This is Temperature DIV -->
+            <div class="TemperatuerDiv">
+                <!-- Number of Temperature -->
+                <p id="TemperatuerNumber">24 </p><span>°C | °F</span>
+                <!-- <p id="IconName">Clear Sky</p> -->
+                <p class="line">____________________</p>
+                <!-- Location Name -->
+                <p id="LocationName">Karachi</p>
+                <!-- This is location Icon -->
+                <i id="LocationIcon" class="fa-solid fa-location-dot fa-bounce" style="color: #ffffff;"></i>
+            </div>
+
+            <!-- search Bar -->
+            <div class="LocationSearch">
+                <input type="search" name="search" id="CityName" placeholder="search">
+            </div>
+
+            <div class="SearchIcon">
+                <!-- <label for="CityName">City:</label> -->
+                <button type="submit"><i id="SearchIcon" class="fa-solid fa-magnifying-glass"
+                        style="color: #000000;"></i></button>
+            </div>
+        </form>
+
+
+        <!-- This is the AI Icons of Weather -->
+        <div id="img">
+            <!-- <img src="images/Not Found.png" class="Error" alt=""> -->
+            <img src="images/cloud day.png" alt="" id="weathericon" class="CloudDay">
+            <!-- <img src="images/cloud night.png" alt="" class="CloudNight"> -->
+            <!-- <img src="images/cold.png" alt="" class="Cold">
+            <img src="images/day.png" alt="" class="DayIcon">
+            <img src="images/night.png" alt="" class="NightIcon">
+            <img src="images/drought.png" alt="" class="BroughtIcon">
+            <img src="images/heat.png" alt="" class="HeatIcon">
+            <img src="images/typhoon.png" alt="" class="TyphoonIcon"> -->
+        </div>
+
+        <div class="WindIcon">
+            <i id="Wind" class="fa-solid fa-wind" style="color: #d4d4d4;"></i>
+            <p id="WindText">8km/h</p>
+        </div>
+
+        <div class="TemperatureIconMine">
+            <i id="TemperatureMine" class="fa-solid fa-temperature-quarter" style="color: #67c3cf;"></i>
+            <p id="TemperatureText">12°</p>
+        </div>
+
+        <div class="TemperatureIconMax">
+            <i id="TemperatureMax" class="fa-solid fa-temperature-full" style="color: #ff0000;"></i>
+            <p id="TemperatureText2">24°</p>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+    <script>
+
+        const CloudDay = document.querySelector("img");
+
+
+        window.getWeather = function () {
+
+            let CityName = document.querySelector("#CityName").value;
+
+
+            let API_KEY = "8d8204de6eb81ffd6a1ae233700f6fd9"
+
+            
+
+            axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${CityName}&appid=${API_KEY}&units=metric`)
+                .then(function (response) {
+                    // handle success 
+                    console.log(response.data); {
+                        console.log(response.data)
+                        document.querySelector("#TemperatuerNumber").innerHTML = Math.round(`${response.data.main.temp}`)
+                        //
+                        document.querySelector("#LocationName").innerHTML = `${response.data.name}`
+                        //
+                        document.querySelector("#WindText").innerHTML = `${response.data.wind.speed}km/h`
+                        //
+                        document.querySelector("#TemperatureText").innerHTML = `${response.data.main.temp_max}°`
+                        //
+                        odocument.querySelector("#TemperatureText2").innerHTML = `${response.data.main.temp_min}°`
+                        //
+
+                        let CloudDay = document.getElementById('weathericon')
+                        console.log(response.data.weather[0].main)
+                        switch (response.data.weather[0].main) {
+                            case "Clouds":
+                                CloudDay.src = "images/cloud day.png";
+                            case "":
+                                CloudDay.src = "images/cloud night.png";
+                            case "cloud day":
+                                CloudDay.src = "images/cold.png";
+                            case "Clear":
+                                CloudDay.src = "images/day.png";
+                            case "cloud day":
+                                CloudDay.src = "images/drought.png";
+                            case "cloud day":
+                                CloudDay.src = "images/heat.png";
+                        }
+                        //document.querySelector("#result5").innerHTML = `${response.data.weather.icon}`
+                        // document.querySelector("#result6").innerHTML = `country<br/>${response.data.sys.country}`
+                    }
+
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error.data);
+                })
+            // let CloudDay = document.getElementById('weathericon')
+            // console.log(response.data.weather[0].main)
+            // switch (response.data.weather[0].main) {
+            //     case "Clouds":
+            //         CloudDay.src = "images/cloud day.png";
+            //     case "":
+            //         CloudDay.src = "images/cloud night.png";
+            //     case "cloud day":
+            //         CloudDay.src = "images/cold.png";
+            //     case "Clear":
+            //         CloudDay.src = "images/day.png";
+            //     case "cloud day":
+            //         CloudDay.src = "images/drought.png";
+            //     case "cloud day":
+            //         CloudDay.src = "images/heat.png";
+            // }
+
+
+            // if(weatherCondition === "Clouds")
+        }
+
+
+
+    </script>
+</body>
+
+</html>
