@@ -81,6 +81,10 @@ span {
     bottom: 40px;
 }
 
+#CityName {
+    font-size: 20px;
+}
+
 .WindIcon {
     /*Wind Icon DIV*/
     display: inline-block;
@@ -187,6 +191,8 @@ span {
     border-radius: 100px;
     /* border-radius: solid green; */
     border: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #SearchIcon {
@@ -273,15 +279,17 @@ button {
 
 
 
-@media (max-width: 1150px) {
+/* @media (max-width: 1070px) {
+
     .contaner {
+        width: 600px;
         margin-left: 200px;
         margin-right: 200px;
         margin-top: 100px;
     }
 }
 
-/* @media (max-width: 1100px) {
+@media (max-width: 1100px) {
     .contaner {
         margin-right: 40px;
         margin-left: 100px;
@@ -295,3 +303,274 @@ button {
         height:560px;
     }
 } */
+
+
+/* Default styles */
+
+/* ... (existing styles) */
+
+/* Responsive styles */
+
+/* 1280 x 800 */
+@media (max-width: 1280px) and (max-height: 800px) {
+    .contaner{
+        max-width: 1100px;
+        max-height: 750px;
+    }
+    
+    /* Adjust styles for this breakpoint */
+}
+
+/* 1024 x 600 */
+@media (max-width: 1024px) and (max-height: 600px) {
+    .contaner{
+        max-width: 1000px;
+        max-height: 600px;
+        margin-left: 150px;
+        margin-top: 60px;
+        margin-bottom: -600px;
+    }
+
+    /* Adjust styles for this breakpoint */
+}
+
+/* 412 x 914 */
+/* @media (max-width: 412px) and (max-height: 914px) {
+
+    .contaner{
+        max-width: 400px;
+        min-height: 1600px;
+    }
+    Adjust styles for this breakpoint
+} */
+
+/* 280 x 653 */
+/* @media (max-width: 280px) and (max-height: 653px) {
+    .contaner{
+        max-width: 200px;
+        min-height: 600px;
+    }
+    Adjust styles for this breakpoint
+} */
+
+/* 540 x 720 */
+@media (max-width: 540px) and (max-height: 720px) {
+    .contaner{
+        max-width: 400px;
+        min-height: 600px;
+    }
+    .CloudDay{
+        margin-left: -170px;
+        margin-top: 120px;
+        width: 230px;
+        height: 200px;
+    }
+
+    .LocationSearch{
+        margin-left: -530px;
+        /* margin-bottom: -300px; */
+        position: relative;
+        top: 300px;
+    }
+
+    button{
+        margin-left: -310px;
+        position: relative;
+        top: 255px;
+    }
+
+    .TemperatuerDiv{
+        position: relative;
+        left: 100px;
+    }
+
+    .line{
+        margin-left: 40px;
+    }
+    /* Adjust styles for this breakpoint */
+}
+
+/* 912 x 1368 */
+@media (max-width: 912px) and (max-height: 1368px) {
+    .contaner{
+        max-width: 400px;
+        min-height: 600px;
+    }
+    .CloudDay{
+        margin-left: -170px;
+        margin-top: 120px;
+        width: 230px;
+        height: 200px;
+    }
+
+    .LocationSearch{
+        margin-left: -530px;
+        /* margin-bottom: -300px; */
+        position: relative;
+        top: 300px;
+    }
+
+    button{
+        margin-left: -310px;
+        position: relative;
+        top: 255px;
+    }
+
+    .TemperatuerDiv{
+        position: relative;
+        left: 100px;
+    }
+
+    .line{
+        margin-left: 40px;
+    }
+    /* Adjust styles for this breakpoint */
+}
+
+/* 768 x 1024 */
+@media (max-width: 768px) and (max-height: 1024px) {
+    .contaner{
+        max-width: 400px;
+        min-height: 600px;
+        margin-left: 60px;
+        margin-right: 50px;
+        margin-top: 50px;
+        margin-bottom: 580px;
+    }
+    .CloudDay{
+        margin-left: -170px;
+        margin-top: 120px;
+        width: 230px;
+        height: 200px;
+    }
+
+    .LocationSearch{
+        margin-left: -530px;
+        /* margin-bottom: -300px; */
+        position: relative;
+        top: 300px;
+    }
+
+    button{
+        margin-left: -310px;
+        position: relative;
+        top: 255px;
+    }
+
+    .TemperatuerDiv{
+        position: relative;
+        left: 100px;
+    }
+
+    .line{
+        margin-left: 40px;
+    }
+    /* Adjust styles for this breakpoint */
+}
+
+/* 820 x 1180 */
+@media (max-width: 820px) and (max-height: 1180px) {
+    .contaner{
+        max-width: 820px;
+        min-height: 1180px;
+    }
+    .CloudDay{
+        margin-left: -170px;
+        margin-top: 520px;
+        width: 500px;
+        height: 400px;
+    }
+
+    .LocationSearch{
+        margin-left: -530px;
+        /* margin-bottom: -300px; */
+        position: relative;
+        top: 300px;
+    }
+
+    button{
+        margin-left: -310px;
+        position: relative;
+        top: 255px;
+    }
+
+    .TemperatuerDiv{
+        position: relative;
+        left: 100px;
+    }
+
+    .line{
+        margin-left: 40px;
+    }
+
+    .WindIcon{
+        background-color: rgb(102, 255, 0);
+        position: relative;
+        left: 60px;
+    }
+
+    #Wind{
+        font-size: 80px;
+    }
+    #WindText{
+        font-size: 40px;
+        position: relative;
+        top: -5px;
+        right: -50;
+    }
+
+
+    #TemperatureText{
+        font-size: 40px;
+        position: relative;
+        top: -8px;
+        right: -50;
+    }
+    .TemperatureIconMine{
+        position: relative;
+        left: 180px;
+        top: -330px;
+    }
+    #TemperatureMine{
+        font-size: 80px;
+    }
+    #TemperatureMax{
+        font-size: 80px;
+    }
+    /* Adjust styles for this breakpoint */
+}
+
+/* 412 x 915 */
+@media (max-width: 412px) and (max-height: 915px) {
+    /* Adjust styles for this breakpoint */
+}
+
+/* 360 x 740 */
+@media (max-width: 360px) and (max-height: 740px) {
+    /* Adjust styles for this breakpoint */
+}
+
+/* 363 x 851 */
+@media (max-width: 363px) and (max-height: 851px) {
+    /* Adjust styles for this breakpoint */
+}
+
+/* 390 x 844 */
+@media (max-width: 390px) and (max-height: 844px) {
+    /* Adjust styles for this breakpoint */
+}
+
+/* 414 x 869 */
+@media (max-width: 414px) and (max-height: 869px) {
+    /* Adjust styles for this breakpoint */
+}
+
+/* 375 x 667 */
+@media (max-width: 375px) and (max-height: 667px) {
+    /* Adjust styles for this breakpoint */
+}
+
+/* 1115 x 667 */
+@media (max-width: 1115px) and (max-height: 667px) {
+    /* Adjust styles for this breakpoint */
+}
